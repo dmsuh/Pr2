@@ -12,10 +12,14 @@ import { Data } from "@/components/types";
 import { ref } from "vue"; // @ is an alias to /src
 
 const show = ref(false);
+const fromData = ref({});
 const write = (data: Data) => {
+  show.value = false;
+  fromData.value = data;
   console.log(data);
 };
 const close = () => {
+  show.value = false;
   console.log("close");
 };
 </script>
